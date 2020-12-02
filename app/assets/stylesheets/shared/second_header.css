@@ -1,0 +1,32 @@
+.second-header {
+  width: 100%;
+  min-width: 800px;
+  height: 130px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-logo {
+  width: 185px;
+  height: 49px;
+}
+
+.a.button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 13px 19px;   /* 余白       */
+  background    : rgba(0, 255, 255, 0.83);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid rgba(0, 255, 255, 0.83);    /* 枠の指定 */
+}
+.a.button:hover {
+  color         : rgba(0, 255, 255, 0.83);     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
