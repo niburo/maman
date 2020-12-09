@@ -10,8 +10,6 @@ a {
 .title-contents {
   width: 100vw;
   background-image: image-url('furima-header01.png');
-  animation-delay  : 5s;
-  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
@@ -19,7 +17,7 @@ a {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 30vh 15vw;
+  padding: 25vh 15vw 10vh;
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
@@ -29,7 +27,7 @@ a {
 }
 
 .service-explain {
-  color: #14dae0;
+  color: #f7f8f8;
   font-size: 5vh;
   line-height: 40px;
 }
@@ -52,7 +50,7 @@ a {
 
 /* FURIMAが選ばれる3つの理由部分 */
 .select-reason-contents {
-  background-image: image-url('ha-todaishou3-1.jpg');
+  background-color: rgba(255, 255, 255, 0.24);
   background-size: cover;
   padding: 5vh 15vw;
 }

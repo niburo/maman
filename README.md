@@ -16,70 +16,12 @@
 
 
 ### Association
- has_many   :  
- has_many   :  purchase
+  has_many :items
+  has_many :messages
+  has_many :room_users
+  has_many :rooms, through: :room_users
 
 
-### addresses テーブル
-
-| Column         | Type          | Options           |
-| -------------- | ------------- | ----------------- |
-| postal_code    | string        | null: false       |
-| prefecture_id  | integer       | null: false       |
-| municipality   | string        | null: false       |
-| house_number   | string        | null: false       |
-| building_name  | string        |                   |
-| phone_number   | string        | null: false       |
-| purchase       | references    | foreign_key: true |
-
-### Association
- belongs_to : purchase
-
-
-
-### items テーブル
-
-| Column                   | Type          | Options         |
-| ------------------------ | ------------- | --------------  |
-| user                     | references    | foreign_key:true|
-| name                     | string        | null: false     |
-| info                     | text          | null: false     |
-| category_id              | integer       | null: false     |
-| sales_status_id          | integer       | null: false     |
-| shipping_fee_status_id   | integer       | null: false     |
-| prefecture_id            | integer       | null: false     |
-| price                    | integer       | null: false     |
-| scheduled_delivery_id    | integer       | null: false     |
-
-### Association
- belongs_to :  user
- has_one    :  purchase
-
-
-
-### purchases テーブル
-
-| Column    | Type       | Options           |
-| --------- | ---------- | ----------------- |
-| user      | references | foreign_key: true |
-| item      | references | foreign_key: true |
-
-
-
-### Association
- belongs_to :  item
- has_one    :  address
- belongs_to :  user
-
-
-
-## comments テーブル
-
-| Column    | Type       | Options    |
-| --------- | ---------- | ---------- |
-| text      | text       | not:  null |
-| user      | references |            |
-| image     | references |            |
 
 ## profiles テーブル
 |      Column        |  Type  |   Options   |
@@ -92,13 +34,57 @@
 | info               | text    |              |
 
 
+### Association
+
+
+## room users テーブル
+|      Column        |  Type      |   Options   |
+| ------------------ | ---------- | ----------- |
+| room               | references | key: true   |
+| user               | references |             |
+
+
+### Association
+  belongs_to :room
+  belongs_to :user
+
+
+## messages テーブル
+|      Column        |  Type      |   Options   |
+| ------------------ | ---------- | ----------- |
+| room               | references | key: true   |
+| user               | references |             |
+| content            | string     |             |
+
+
+### Association
+  belongs_to :room
+  belongs_to :user
+  has_one_attached :image
+
+
+## rooms テーブル
+|      Column        |  Type      |   Options   |
+| ------------------ | ---------- | ----------- |
+| name               | string     | null: false |
+
+
+### Association
+  has_many :room_users
+  has_many :users, through: :room_users, dependent: :destroy
+  has_many :messages, dependent: :destroy
+
+
+
+
+
 ## ペルソナ
 年齢：20歳〜40歳
 性別：主に女性（男性も）育児してる人
 
 開発アプリ
 育児補佐アプリ(タイトル：ままん)
-SOA
+
 ビジネスモデル   広告料：宣伝：売り買い
 
 自分の経験からこのようなアプリがつくりたいと思いました

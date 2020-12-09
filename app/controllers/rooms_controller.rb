@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :move_to_index
   def index
     @rooms = Room.all
   end
@@ -10,7 +11,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to root_path
+      redirect_to rooms_path
     else
       render :new
     end
@@ -26,5 +27,11 @@ class RoomsController < ApplicationController
 
   def room_params
     params.require(:room).permit(:name, user_ids: [])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end

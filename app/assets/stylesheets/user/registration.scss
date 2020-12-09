@@ -1,16 +1,17 @@
 .registration-main {
+  background-image: image-url('22946001740.jpg');
+  background-size: cover;
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-color: #fff;
   display: flex;
   justify-content: center;
 }
 
+
 /* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
   width: 50%;
-  background-color: white;
   padding-bottom: 70px;
 }
 

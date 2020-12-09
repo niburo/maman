@@ -2,11 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .wrapper {
+  background-image: image-url('11038022149.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
   display: flex;
 }
 
 .side-bar {
-  background-color: #253141;
+
   width: 300px;
   height: 100vh;
 }
@@ -14,7 +19,6 @@
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
-  background-color: #253141;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +26,7 @@
 
 .header-name a{
   font-size: 16px;
-  color: #FAFAFA;
+  color: #050505;
   text-decoration: none;
 }
 
@@ -31,14 +35,13 @@
 }
 
 .create-room a {
-  border: 1px solid lightblue;
   padding: 14px;
   color: deepskyblue;
   text-decoration: none;
 }
 
 .rooms {
-  background-color: #2F3E51;
+
   height: calc(100vh - 100px);
   padding: 0 20px;
   overflow: scroll;
@@ -50,11 +53,11 @@
 
 .room-name a {
   text-decoration: none;
-  color: white;
+  color: rgb(2, 2, 2);
 }
 
 .chat {
-  background-color: #ffffff;
+
   width: calc(100vw - 300px);
 }
 
@@ -77,13 +80,10 @@
 
 .header-button a {
   text-decoration: none;
-  border: 1px solid darkred;
-  color: darkred;
-  padding: 20px;
 }
 
 .messages {
-  background-color: #FAFAFA;
+  background-color: #fafafa81;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
   overflow: scroll;
@@ -119,19 +119,19 @@
 }
 
 .form {
-  background-color: #DDDDDD;
   height: 90px;
   padding: 20px 40px;
   display: flex;
 }
 
 .form-input {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.404);
   display: flex;
   width: 100%;
 }
 
 .form-message {
+  background-color: #fafafa73;
   border: none;
   height: 50px;
   width: 100%;

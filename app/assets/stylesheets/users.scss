@@ -1,0 +1,51 @@
+.user-main {
+  height: 100vh;
+}
+
+.profile {
+  width: 50%;
+  margin: 50px auto;
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.profile-title {
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+}
+
+.profile-main {
+  height: 50vh;
+} 
+
+.user-wrap {
+  margin: 0 auto;
+  width: 300px;
+  display: block;
+  margin-top: 100px;
+}
+
+.profile-wrap {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.profile-key {
+  width: 150px;
+  text-align: right;
+  line-height: 30px;
+  font-size: 15px;
+
+}
+
+.profile-value {
+  width: 150px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
